@@ -3,11 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # 或 master，取决于你的默认分支名
+      - main
+  workflow_dispatch:  # 添加手动触发选项
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 添加写入权限
     steps:
       - uses: actions/checkout@v3
       
@@ -15,9 +18,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '16'
+          cache: 'npm'  # 添加缓存以加快安装
           
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # 使用 ci 而不是 install 以确保一致性
         
       - name: Build
         run: npm run build
@@ -26,4 +30,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist 
+          publish_dir: ./dist
+          force_orphan: true  # 确保干净的部署历史
+          commit_message: "Deploy: ${{ github.event.head_commit.message }}" 
