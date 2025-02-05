@@ -256,45 +256,5 @@
     transform: translateY(-70%) rotate(320deg);
 }
 
-/* 添加耳朵摇摆动画 */
-@keyframes earLeftWave {
-    0%, 100% {
-        transform: rotate(43deg);
-    }
-    50% {
-        transform: rotate(30deg);
-    }
-}
-
-@keyframes earRightWave {
-    0%, 100% {
-        transform: rotate(-36deg);
-    }
-    50% {
-        transform: rotate(-23deg);
-    }
-}
-
-/* 添加耳朵尖摆动动画 */
-@keyframes earTipLeftWave {
-    0%, 100% {
-        transform: rotate(39deg);
-    }
-    50% {
-        transform: rotate(32deg);
-    }
-}
-
-@keyframes earTipRightWave {
-    0%, 100% {
-        transform: rotate(-43deg);
-    }
-    50% {
-        transform: rotate(-36deg);
-    }
-}
-
-
-
 /*可爱的皮卡丘完成啦~*/
 

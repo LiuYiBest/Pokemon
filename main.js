@@ -61,7 +61,7 @@ const string = `
     background: #000;
     transform: rotate(-43deg);
 }
-/*画皮卡丘的圆脸*/
+/*画皮卡丘大大的圆脸*/
 .head {
     background: #ffdc2e;
     border-radius: 50% 50% 50% 50% / 36% 36% 54% 54%;
@@ -144,7 +144,6 @@ const string = `
     align-self: center; 
     z-index: 1;
     background: #ffdb2a;
-    padding-top: 5px;
 }
 .eye {
     width: 60px;
@@ -218,14 +217,13 @@ const string = `
 .reversed{
     transform: scale(-1, 1);
 }
-/*小嘴巴*/
+/*俏皮小嘴巴*/
 .mouth {
     width: 53px;
     height: 35px;
     display: inline-block;
     margin: 7px 0 0;
 }
-
 #mouth1{
     transform: rotate(-25deg);
     border-bottom: 5px solid #000; 
@@ -236,8 +234,32 @@ const string = `
   border-bottom: 5px solid #000;
      border-bottom-right-radius: 40px 27px;
 }
+/* 添加闪电效果 */
+.lightning {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: url('https://www.megghy.com/gif_animate/natura/tuoni/3.gif') no-repeat;
+    background-size: contain;
+    z-index: 100;
+    transform: rotate(180deg);
+}
+
+.lightning-left {
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.lightning-right {
+    right: -120px;
+    top: 75%;
+    transform: translateY(-70%) rotate(320deg);
+}
 
 /*可爱的皮卡丘完成啦~*/
+
+
 `
 
 
@@ -301,19 +323,7 @@ const player = {
         player.play()
     }
 }
-// player.init()
-
-
-
-
-
-
-
-
-
-
-
-
+player.init()
 
 
 
