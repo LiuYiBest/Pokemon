@@ -13,20 +13,25 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.css$/i,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource'
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html',
-            filename: 'index.html'
+            filename: 'index.html',
+            inject: true
         }),
         new CopyPlugin({
             patterns: [
-                { 
-                    from: "*.gif", 
+                {
+                    from: "*.gif",
                     to: "[name][ext]",
                     noErrorOnMissing: true
                 }
@@ -36,5 +41,8 @@ module.exports = {
     devServer: {
         static: './dist',
         hot: true
+    },
+    resolve: {
+        extensions: ['.js', '.css']
     }
 }; 
