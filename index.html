@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Document</title><script defer="defer" src="bundle.js"></script></head><body><style id="demo2"></style><div id="demo"></div><div id="buttons"><button id="btnSlow">慢速</button> <button id="bunNormal">中速</button> <button id="btnFast">快速</button></div><style>* {
+            box-sizing: border-box
+        }
+
+        body {
+            background-color: #ffdc2e;
+        }
+
+        #buttons {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 20;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1em;
+            margin-right: 1em;
+        }
+
+        #buttons>button {
+            display: inline-block;
+            margin-bottom: 1em;
+            border: 1px solid #dcdee2;
+            background: white;
+            color: #515a6e;
+            height: 32px;
+            line-height: 1.5;
+            font-size: 14px;
+            padding: 0 15px;
+            outline: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #buttons>button:focus {
+            box-shadow: 0 0 2px rgba(45, 140, 240, .2);
+            background: #ecf5ff;
+            ;
+            border-color: #c6e2ff;
+        }
+
+        #buttons>button:active {
+            color: #2b85e4;
+            background-color: #fff;
+            border-color: #2b85e4;
+            outline: none;
+        }
+
+        #buttons>button:hover {
+            color: #57a3f3;
+            background-color: #ecf5ff;
+            border-color: #57a3f3;
+        }
+
+        #demo2 {
+            display: none;
+        }
+
+        #demo {
+            background-color: #fff;
+            position: fixed;
+            height: 30vh;
+            top: 0;
+            left: 0;
+            width: 100%;
+            border: 1px solid #999;
+            overflow-y: auto;
+        }
+
+        #demo::-webkit-scrollbar {
+            display: none;
+        }
+
+        .sky {
+            position: fixed;
+            bottom: 0;
+            left: 30%;
+            width: 100%;
+            height: 70vh;
+        }</style><div class="sky"><div class="main"><div class="pik"><div style="display: flex; flex-wrap: wrap; justify-content: space-between"><div class="ear ear-left"></div><div class="ear ear-right"></div></div><div class="head"><div class="lightning lightning-left"></div><div class="cheek"></div><div class="cheek offset"></div><div class="face"><div class="eyes"><div class="eye"></div><div class="nose"></div><div class="eye reversed"></div></div><div class="mouth" id="mouth1"></div><div class="mouth" id="mouth2"></div></div><div class="lightning lightning-right"></div></div><div class="body"></div></div></div></div><script src="main.js"></script></body></html>
