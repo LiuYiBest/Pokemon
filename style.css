@@ -143,7 +143,6 @@
     align-self: center; 
     z-index: 1;
     background: #ffdb2a;
-    padding-top: 5px;
 }
 .eye {
     width: 60px;
@@ -234,5 +233,68 @@
   border-bottom: 5px solid #000;
      border-bottom-right-radius: 40px 27px;
 }
+/* 添加闪电效果 */
+.lightning {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: url('https://www.megghy.com/gif_animate/natura/tuoni/3.gif') no-repeat;
+    background-size: contain;
+    z-index: 100;
+    transform: rotate(180deg);
+}
+
+.lightning-left {
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.lightning-right {
+    right: -120px;
+    top: 75%;
+    transform: translateY(-70%) rotate(320deg);
+}
+
+/* 添加耳朵摇摆动画 */
+@keyframes earLeftWave {
+    0%, 100% {
+        transform: rotate(43deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+}
+
+@keyframes earRightWave {
+    0%, 100% {
+        transform: rotate(-36deg);
+    }
+    50% {
+        transform: rotate(-23deg);
+    }
+}
+
+/* 添加耳朵尖摆动动画 */
+@keyframes earTipLeftWave {
+    0%, 100% {
+        transform: rotate(39deg);
+    }
+    50% {
+        transform: rotate(32deg);
+    }
+}
+
+@keyframes earTipRightWave {
+    0%, 100% {
+        transform: rotate(-43deg);
+    }
+    50% {
+        transform: rotate(-36deg);
+    }
+}
+
+
+
 /*可爱的皮卡丘完成啦~*/
 

@@ -225,6 +225,7 @@ const string = `
     display: inline-block;
     margin: 7px 0 0;
 }
+
 #mouth1{
     transform: rotate(-25deg);
     border-bottom: 5px solid #000; 
@@ -243,7 +244,7 @@ const string = `
 const player = {
     id: undefined,
     n: 1,
-    time: 100,
+    time: 0,
     ui: {
         demo: document.querySelector('#demo'),
         demo2: document.querySelector('#demo2')
@@ -286,12 +287,12 @@ const player = {
     },
     slow: () => {
         player.pause()
-        player.time = 100
+        player.time = 20
         player.play()
     },
     normal: () => {
         player.pause()
-        player.time = 40
+        player.time = 10
         player.play()
     },
     fast: () => {
@@ -300,7 +301,7 @@ const player = {
         player.play()
     }
 }
-player.init()
+// player.init()
 
 
 

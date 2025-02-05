@@ -236,6 +236,7 @@ const string = `
      border-bottom-right-radius: 40px 27px;
 }
 
+
 /*可爱的皮卡丘完成啦~*/
 `
 export default string
