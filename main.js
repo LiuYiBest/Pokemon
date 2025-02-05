@@ -1,5 +1,3 @@
-import './style.css';
-
 const string = `
 /* 让我们动手来画一只皮卡丘吧！
 接下来我要展示神奇的技巧！*/
